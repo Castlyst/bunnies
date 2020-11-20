@@ -1,6 +1,6 @@
 import pandas as pd
 import pyspark
-from IPython.display import display
+from IPython.display import display_html
 
 
 class DataFrame:
@@ -14,4 +14,4 @@ class DataFrame:
         if console:
             print(self._frame.to_string(index=False, max_rows=n))
         else:
-            display(self._frame)
+            display_html(self._frame.to_html(index=False, max_rows=n), raw=True)
