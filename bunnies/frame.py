@@ -14,4 +14,4 @@ class DataFrame:
         if console:
             print(self._frame.to_string(index=False, max_rows=n))
         else:
-            display((self._frame,))
+            display(self._frame)
